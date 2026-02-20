@@ -2,68 +2,161 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>El Mundo de los Animales</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f9f4;
+        }
+
+        header {
+            background-color: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #3cb371;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #2e8b57;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Bienvenidos a mi Página Web</h1>
-    </header>
+<header>
+    <h1>🐾 El Mundo de los Animales</h1>
+    <p>Descubre información interesante sobre diferentes especies</p>
+</header>
 
-    <main>
-        <section>
-            <h2>Sobre mí</h2>
-            <p>
-                Hola, esta es mi primera página web creada con HTML.
-                Estoy aprendiendo a estructurar contenido utilizando
-                etiquetas semánticas.
-            </p>
-        </section>
+<nav>
+    <a href="#mamiferos">Mamíferos</a>
+    <a href="#aves">Aves</a>
+    <a href="#tabla">Datos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
-        <section>
-            <h2>Mis intereses</h2>
-            <ul>
-                <li>Programación</li>
-                <li>Desarrollo Web</li>
-                <li>Tecnología</li>
-            </ul>
-        </section>
+<main>
 
-        <section>
-            <h2>Imagen de ejemplo</h2>
-            <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
-        </section>
+<section id="mamiferos">
+    <h2>🐶 Mamíferos</h2>
+    <p>Los mamíferos son animales que se caracterizan por tener pelo y alimentar a sus crías con leche.</p>
+    <ul>
+        <li>Perro</li>
+        <li>Gato</li>
+        <li>León</li>
+        <li>Elefante</li>
+    </ul>
+    <img src="https://via.placeholder.com/300" alt="Mamífero">
+</section>
 
-        <section>
-            <h2>Enlace útil</h2>
-            <p>
-                Visita 
-                <a href="https://www.github.com" target="_blank">
-                    GitHub
-                </a> 
-                para alojar tus proyectos.
-            </p>
-        </section>
+<section id="aves">
+    <h2>🦅 Aves</h2>
+    <p>Las aves son animales vertebrados que tienen plumas y alas.</p>
+    <ol>
+        <li>Águila</li>
+        <li>Loro</li>
+        <li>Colibrí</li>
+    </ol>
+    <img src="https://via.placeholder.com/300" alt="Ave">
+</section>
 
-        <section>
-            <h2>Formulario de Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
+<section id="tabla">
+    <h2>📊 Datos Curiosos</h2>
+    <table>
+        <tr>
+            <th>Animal</th>
+            <th>Hábitat</th>
+            <th>Tipo</th>
+        </tr>
+        <tr>
+            <td>León</td>
+            <td>Sabana</td>
+            <td>Mamífero</td>
+        </tr>
+        <tr>
+            <td>Águila</td>
+            <td>Montañas</td>
+            <td>Ave</td>
+        </tr>
+        <tr>
+            <td>Tiburón</td>
+            <td>Océano</td>
+            <td>Pez</td>
+        </tr>
+    </table>
+</section>
 
-                <label for="correo">Correo:</label><br>
-                <input type="email" id="correo" name="correo"><br><br>
+<section id="contacto">
+    <h2>📩 Contáctanos</h2>
+    <form>
+        <label>Nombre:</label><br>
+        <input type="text"><br><br>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+        <label>Animal favorito:</label><br>
+        <input type="text"><br><br>
 
-    <footer>
-        <p>© 2026 Mi Página Web - Creada por Dulce</p>
-    </footer>
+        <label>Comentarios:</label><br>
+        <textarea rows="4" cols="30"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 El Mundo de los Animales - Creado por Dulce</p>
+</footer>
 
 </body>
 </html>
