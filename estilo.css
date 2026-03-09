@@ -1,0 +1,35 @@
+.container{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: black;
+    padding: 10px;
+    height: 90px;
+}
+
+.container div{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: "Pacifico", cursive;
+}
+
+/* colores de cada caja */
+.caja1{
+    background-color: blue;
+}
+
+.caja2{
+    background-color: green;
+}
+
+.caja3{
+    background-color: yellow;
+}
+
+.caja4{
+    background-color: red;
+}
