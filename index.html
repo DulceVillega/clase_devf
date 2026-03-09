@@ -1,162 +1,182 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>El Mundo de los Animales</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks México (Clone) - Estructura</title>
+    <link rel="stylesheet" href="styles.css" />
 
-    <style>
-        body {  
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f9f4;
-        }
+    <!--
+      Referencia de colores (como guía):
+      - Verde Starbucks (brand): #006241 (Pantone 3425 C suele citarse en recursos de marca) :contentReference[oaicite:2]{index=2}
+      - Alternativa muy usada en paletas: #00704A :contentReference[oaicite:3]{index=3}
+      - Blanco: #FFFFFF | Negro: #000000 :contentReference[oaicite:4]{index=4}
+    -->
+  </head>
 
-        header {
-            background-color: #2e8b57;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+  <body>
+    <!-- Accesibilidad -->
+    <!-- <a href="#main">Saltar al contenido</a>-->
 
-        nav {
-            background-color: #3cb371;
-            text-align: center;
-            padding: 10px;
-        }
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <div class="header-inner">
+       <!-- Logo -->
+      <a class="brand" href="index.html" aria-label="Starbucks México - Inicio">
+        <img src="img/logo.png" alt="Starbucks México" class="logo">
+      </a>
 
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        <!-- Nav principal -->
+        <nav class="primary-nav" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#menu">Menu</a></li>
+            <li class="nav-item"><a href="https://rewards.starbucks.mx/">Rewards</a></li>
+          </ul>
+        </nav>
 
-        section {
-            padding: 20px;
-        }
+        <!-- Acciones (lado derecho) -->
+        <div class="header-actions" aria-label="Acciones de usuario">
+          <a href="https://www.starbucks.com.mx/stores">Localizar Tienda</a>
+          <a href="https://rewards.starbucks.mx/">Ingresar</a>
+          <a href="https://rewards.starbucks.mx/">Únete</a>
+        </div>
 
-        img {
-            width: 300px;
-            border-radius: 10px;
-        }
+        <!-- Botón menú móvil (si lo quieres implementar después) -->
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span>☰</span>
+        </button>
+      </div>
+    </header>
 
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: auto;
-        }
+    <!-- MAIN -->
+    <main id="main" class="site-main">
+      <!-- SECCIÓN 1: Promo/Hero -->
+      <section class="promo promo-hero" aria-labelledby="promo-hero-title">
+        <div class="promo-content">
+          <h2 id="promo-hero-title">¿Nuevas vibes?</h2>
+          <p>Primero tu Starbucks para comenzar este 2026 con tu nuevo mood.</p>
+          <a class="promo-cta" href="#">Descubre más</a>
+        </div>
 
-        table, th, td {
-            border: 1px solid #333;
-            padding: 8px;
-            text-align: center;
-        }
+        <!-- Imagen del hero (placeholder) -->
+        <figure class="promo-media">
+          <img src="img/1.PNG" alt="Imagen promocional principal" />
+        </figure>
+      </section>
 
-        footer {
-            background-color: #2e8b57;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
+      <!-- SECCIÓN 2: Promo producto -->
+      <section class="promo promo-product" aria-labelledby="promo-product-title">
+        <div class="promo-content">
+          <h2 id="promo-product-title">Strato Frappuccino®</h2>
+          <p>Tu próximo Fav</p>
+          <p>
+            Primero tu Starbucks con Fresa Matcha Strato Frappuccino®, Brown Sugar Strato Frappuccino®,
+            Salted Caramel Mocha Strato Frappuccino®.
+          </p>
+          <a class="promo-cta" href="#">Descubre más</a>
+        </div>
 
-        button {
-            background-color: #2e8b57;
-            color: white;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
+        <figure class="promo-media">
+          <img src="img/2.PNG" alt="Imagen de bebidas Strato Frappuccino" />
+        </figure>
+      </section>
 
-<body>
+      <!-- SECCIÓN 3: Rewards -->
+      <section class="promo promo-rewards" aria-labelledby="promo-rewards-title">
+        <div class="promo-content">
+          <h2 id="promo-rewards-title">Recompensas todo el año</h2>
+          <p>
+            Sé parte de las recompensas que te da tu bebida favorita. Obtén más café gratis, promociones exclusivas,
+            accesos a productos antes que nadie y más.
+          </p>
+          <a class="promo-cta" href="https://rewards.starbucks.mx/">Conoce Rewards</a>
+        </div>
 
-<header>
-    <h1>El Mundo de los Animales</h1>
-    <p>Descubre información interesante sobre diferentes especies</p>
-</header>
+        <figure class="promo-media">
+          <img src="img/3.PNG" alt="Imagen del programa Starbucks Rewards" />
+        </figure>
+      </section>
 
-<nav>  
-    <a href="#mamiferos">Mamíferos</a>
-    <a href="#aves">Aves</a>
-    <a href="#tabla">Datos</a> 
-    <a href="#contacto">Contacto</a>
-</nav>  
+      <!-- SECCIÓN 4: Sustentabilidad / vasos -->
+      <section class="promo promo-cups" aria-labelledby="promo-cups-title">
+        <div class="promo-content">
+          <h2 id="promo-cups-title">¡Tus vasos y termos son bienvenidos!</h2>
+          <p>
+            Cada vez que eliges llevar tu vaso o termo para tomar tus bebidas obtienes $8 de descuento y ayudas a cuidar
+            el planeta.
+          </p>
+        </div>
 
-<main>
+        <figure class="promo-media">
+          <img src="img/4.PNG" alt="Imagen de vasos y termos reutilizables" />
+        </figure>
+      </section>
 
-<section id="mamiferos">
-    <h2>Mamíferos </h2>
-    <p>Los mamíferos son animales que se caracterizan por tener pelo y alimentar a sus crías con leche.</p>
-    <ul>
-        <li>Perro</li>
-        <li>Gato</li>
-        <li>León</li>
-        <li>Elefante</li>
-    </ul>
-    <img src="https://via.placeholder.com/300" alt="Mamífero">
-</section>
+      <!-- SECCIÓN 5: Eventos + T&C (bloque simple) -->
+      <section class="promo-grid">
 
-<section id="aves">
-    <h2>Aves</h2>
-    <p>Las aves son animales vertebrados que tienen plumas y alas.</p>
-    <ol>
-        <li>Águila</li>
-        <li>Loro</li>
-        <li>Colibrí</li>
-    </ol>
-    <img src="https://via.placeholder.com/300" alt="Ave">
-</section>
+        <div class="promo-box promo-news">
+          <h2>Noticias Starbucks</h2>
+          <p>Consulta los eventos más recientes.</p>
+          <a href="#" class="promo-cta">Aquí</a>
+        </div>
 
-<section id="tabla">
-    <h2>Datos Curiosos</h2>
-    <table>
-        <tr>
-            <th>Animal</th>
-            <th>Hábitat</th>
-            <th>Tipo</th>
-        </tr>
-        <tr>
-            <td>León</td>
-            <td>Sabana</td>
-            <td>Mamífero</td>
-        </tr>
-        <tr>
-            <td>Águila</td>
-            <td>Montañas</td>
-            <td>Ave</td>
-        </tr>
-        <tr>
-            <td>Tiburón</td>
-            <td>Océano</td>
-            <td>Pez</td>
-        </tr>
-    </table>
-</section>
+        <div class="promo-box promo-terms">
+          <h2>Conoce nuestras promociones</h2>
+          <p>Términos y condiciones.</p>
+          <a href="#" class="promo-cta">Ver más</a>
+        </div>
+      </section>
+    </main>
 
-<section id="contacto">
-    <h2>Contáctanos</h2>
-    <form>
-        <label>Nombre:</label><br>
-        <input type="text"><br><br>
+    <!-- FOOTER -->
+    <footer class="site-footer">
 
-        <label>Animal favorito:</label><br>
-        <input type="text"><br><br>
+      <div class="footer-top">
+        <div class="footer-columns">
 
-        <label>Comentarios:</label><br>
-        <textarea rows="4" cols="30"></textarea><br><br>
+          <div class="footer-col">
+            <h4>Sobre Nosotros</h4>
+            <ul>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Historias Starbucks</a></li>
+            </ul>
+          </div>
 
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+          <div class="footer-col">
+            <h4>Atención al cliente</h4>
+            <ul>
+              <li><a href="#">Contáctanos</a></li>
+              <li><a href="#">Facturas Electrónicas</a></li>
+              <li><a href="#">Formas de comprar</a></li>
+            </ul>
+          </div>
 
-</main>
+        </div>
+      </div>
 
-<footer>
-    <p>© 2026 El Mundo de los Animales - Creado por Dulce</p>
-</footer>
+      <div class="footer-divider"></div>
 
-</body>
+      <div class="footer-social">
+        <a href="#" ><img src="img/face.png" ></a>
+        <a href="#"><img src="img/insta.png" ></a>
+        <a href="#"><img src="img/twi.png" ></a>
+        <a href="#"><img src="img/you.png" ></a>
+      </div>
+
+      <div class="footer-legal">
+        <a href="#">Accesibilidad Web</a>
+        <a href="#">Aviso de Privacidad</a>
+        <a href="#">Boletines</a>
+        <a href="#">Condiciones de uso</a>
+        <a href="#">Mapa del sitio</a>
+        <a href="#">Preferencias sobre cookies</a>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Starbucks Coffee Company. Reservados todos los derechos.
+      </div>
+
+    </footer>
+  </body>
 </html>
