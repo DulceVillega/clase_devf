@@ -5,7 +5,8 @@
     align-items: center; 
     background-color: black;
     padding: 10px;
-    height: 90px;
+    height: 90px; 
+
 }
 
 .container div{
@@ -16,6 +17,7 @@
     align-items: center;
     font-size: 22px;
     font-family: "Pacifico", cursive;
+    
 }
 
 /* colores de cada caja */
